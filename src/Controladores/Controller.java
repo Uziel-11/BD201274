@@ -1,8 +1,8 @@
-package simple;
+package Controladores;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
-import persistencia.DAO;
+
 
 public class Controller {
     @FXML
@@ -10,9 +10,9 @@ public class Controller {
 
     @FXML
     void Practica_AlumnoADO(ActionEvent event) {
-        DAO dao = new DAO();
+        /*DAO dao = new DAO();
         dao.crear();
-        dao.getAlumnos();
+        dao.getAlumnos();*/
         //dao.deleteCiudad();
 
         //dao.getCiudad(1);
