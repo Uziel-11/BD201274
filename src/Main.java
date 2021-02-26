@@ -1,5 +1,3 @@
-package simple;
-
 import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
@@ -12,7 +10,7 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception{
-        Parent root = FXMLLoader.load(getClass().getResource("simple.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/vistas/Menu.fxml"));
         primaryStage.setTitle("Hello World");
         primaryStage.setScene(new Scene(root, 300, 275));
         primaryStage.show();
@@ -21,13 +19,7 @@ public class Main extends Application {
     }
 
 
-
-
-
     public static void main(String[] args) {
         launch(args);
-        JavaPostgreSQLBasic javaPostgreSQLBasic = new JavaPostgreSQLBasic();
-        javaPostgreSQLBasic.connectDatabase();
-
     }
 }
