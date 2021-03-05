@@ -1,12 +1,10 @@
 <component name="libraryTable">
-  <library name="required">
+  <library name="required1">
     <CLASSES>
       <root url="file://$PROJECT_DIR$/../../Base_Datos/corte1/HibernateCoreJava/hibernateJarFiles/required" />
     </CLASSES>
     <JAVADOC />
-    <SOURCES>
-      <root url="jar://$USER_HOME$/.ideaLibSources/hibernate-core-4.0.0.Final-sources.jar!/" />
-    </SOURCES>
+    <SOURCES />
     <jarDirectory url="file://$PROJECT_DIR$/../../Base_Datos/corte1/HibernateCoreJava/hibernateJarFiles/required" recursive="false" />
   </library>
 </component>
