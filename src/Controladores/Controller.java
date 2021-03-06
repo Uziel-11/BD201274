@@ -23,4 +23,9 @@ public class Controller {
 
     }
 
+public void datos(){
+        AgregUsuario us=new AgregUsuario();
+        Integer dao1 = us.addCliente(23, "Juan", "9931847636", "1ra, Norte Sur", "Tuxtla Gutierrez");
+}
+
 }

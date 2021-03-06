@@ -17,7 +17,7 @@ public class Clientes {
     private String Nombre;
 
     @Column(name = "Celular")
-    private long Celular;
+    private String Celular;
 
     @Column(name = "Direccion")
     private String Direccion;
@@ -29,7 +29,7 @@ public class Clientes {
 
     }
 
-    public Clientes(int NumeroCliente, String Nombre, long Celular, String Direccion, String Ciudad){
+    public Clientes(int NumeroCliente, String Nombre, String Celular, String Direccion, String Ciudad){
         this.NumeroCliente = NumeroCliente;
         this.Nombre = Nombre;
         this.Celular = Celular;
@@ -60,11 +60,11 @@ public class Clientes {
         this.Nombre = Nombre;
     }
 
-    public long getCelular(){
+    public String getCelular(){
         return Celular;
     }
 
-    public void setCelular(long celular) {
+    public void setCelular(String celular) {
         Celular = celular;
     }
 
