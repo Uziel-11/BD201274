@@ -2,43 +2,21 @@ package persistencia;
 
 import javax.persistence.*;
 
-@Entity
-@Table(name = "animales")
+
 public class Animal {
 
-    @Id
-    @GeneratedValue
-    @Column(name = "IdAnimales")
     private int idAnimal;
-
-    @Column(name = "Numero_Cliente")
     private int idCliente;
-
-    @Column(name = "Nombre")
     private String nombre;
-
-    @Column(name = "Tipo")
     private String tipo;
-
-    @Column(name = "Raza")
     private String raza;
-
-    @Column(name = "Sexo")
     private String sexo;
-
-    @Column(name = "Fecha_Ingreso")
     private String ingreso;
-
-    @Column(name = "Peso")
     private int peso;
-
-    @Column(name = "Motivo")
     private String motivo;
 
-    public Animal(){
-    }
-
-    public Animal(int idCliente, String nombre, String tipo, String raza, String sexo, String ingreso, int peso, String motivo) {
+    public Animal(int idAnimal, int idCliente, String nombre, String tipo, String raza, String sexo, String ingreso, int peso, String motivo) {
+        this.idAnimal = idAnimal;
         this.idCliente = idCliente;
         this.nombre = nombre;
         this.tipo = tipo;
@@ -48,7 +26,6 @@ public class Animal {
         this.peso = peso;
         this.motivo = motivo;
     }
-
 
     public int getIdAnimal() {
         return idAnimal;
@@ -121,4 +98,5 @@ public class Animal {
     public void setMotivo(String motivo) {
         this.motivo = motivo;
     }
+
 }
