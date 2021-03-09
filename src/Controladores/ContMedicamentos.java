@@ -10,39 +10,40 @@ import org.hibernate.cfg.Configuration;
 import org.hibernate.service.ServiceRegistry;
 import org.hibernate.service.ServiceRegistryBuilder;
 import persistencia.Clientes;
+import persistencia.Medicamento;
 
-public class ContClientes {
+public class ContMedicamentos {
 
     private static SessionFactory factory;
     private static ServiceRegistry serviceRegistry;
 
-    public ContClientes(){
+    public ContMedicamentos(){
         System.err.println("Iniciando");
         try {
             Configuration configuration = new Configuration();
-            System.err.println("Leyendo configuracion");
+            System.err.println("Leyendo Configuracion");
             configuration.configure("");
             serviceRegistry = new ServiceRegistryBuilder().applySettings(configuration.getProperties()).buildServiceRegistry();
-            factory = configuration.buildSessionFactory(serviceRegistry);
-        } catch (Throwable ex) {
+        }catch (Throwable ex){
             System.err.println("No se puede crear la Sesion" + ex);
             throw new ExceptionInInitializerError(ex);
         }
     }
 
-    public void addClientes (Clientes clientes){
+    public void addMedicamento (Medicamento medicamento){
 
     }
 
-    public void deleteClientes (Clientes clientes){
+    public void  deleteMedicamentos (Medicamento medicamento){
 
     }
 
-    public void upgradeClientes (Clientes clientes){
+    public void  upgradeMedicamentos (Medicamento medicamento){
 
     }
 
-    //public List<Clientes> listaCliente (){
+    //public List<Medicamento> listaMedicamentos (){
 
     //}
+
 }
