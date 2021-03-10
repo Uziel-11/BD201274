@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="700.0" prefWidth="1400.0" style="-fx-background-color: #00CDFB;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/11.0.1" fx:controller="vistas.RegistroController">
+   <children>
+      <Label layoutX="557.0" layoutY="210.0" text="REGISTRO" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="60.0" />
+         </font>
+      </Label>
+      <Label layoutX="226.0" layoutY="320.0" text="Cliente" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="30.0" />
+         </font>
+      </Label>
+      <Label layoutX="1063.0" layoutY="320.0" prefHeight="45.0" prefWidth="125.0" text="Mascota" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="30.0" />
+         </font>
+      </Label>
+      <TextField layoutX="950.0" layoutY="383.0" prefHeight="25.0" prefWidth="350.0" promptText="Nombre" />
+      <TextField layoutX="950.0" layoutY="512.0" prefHeight="25.0" prefWidth="350.0" promptText="Edad" />
+      <ComboBox layoutX="950.0" layoutY="447.0" prefHeight="25.0" prefWidth="350.0" promptText="Especie de la mascota" />
+      <TextField layoutX="100.0" layoutY="383.0" prefHeight="25.0" prefWidth="350.0" promptText="Nombre" />
+      <TextField layoutX="485.0" layoutY="383.0" prefHeight="25.0" prefWidth="350.0" promptText="Apellido" />
+      <TextField layoutX="100.0" layoutY="447.0" prefHeight="25.0" prefWidth="350.0" promptText="Dirección" />
+      <TextField layoutX="485.0" layoutY="447.0" prefHeight="25.0" prefWidth="350.0" promptText="Correo electronico" />
+      <TextField layoutX="100.0" layoutY="512.0" prefHeight="25.0" prefWidth="350.0" promptText="Numero celular" />
+      <Button layoutX="631.0" layoutY="600.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="140.0" style="-fx-background-color: #3FFE2A;" text="Generar registro" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Button>
+      <Button layoutX="100.0" layoutY="47.0" mnemonicParsing="false" onAction="#home" text="Atras" />
+   </children>
+</AnchorPane>

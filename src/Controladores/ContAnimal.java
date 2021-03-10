@@ -23,7 +23,7 @@ public class ContAnimal {
         try {
             Configuration configuration = new Configuration();
             System.err.println("leyendo configuracion");
-            configuration.configure("");
+            configuration.configure("src/");
             serviceRegistry = new ServiceRegistryBuilder().applySettings(configuration.getProperties()).buildServiceRegistry();
             factory = configuration.buildSessionFactory(serviceRegistry);
         } catch (Throwable ex){
