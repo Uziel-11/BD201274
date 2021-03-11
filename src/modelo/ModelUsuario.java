@@ -1,6 +1,9 @@
 package modelo;
 import org.hibernate.*;
 import org.hibernate.cfg.Configuration;
+import org.hibernate.criterion.Criterion;
+import org.hibernate.criterion.LogicalExpression;
+import org.hibernate.criterion.Restrictions;
 import org.hibernate.service.ServiceRegistry;
 import org.hibernate.SessionFactory;
 import org.hibernate.Session;
@@ -39,7 +42,23 @@ public class ModelUsuario {
         }
     }
 
+<<<<<<< HEAD
 
 
 
+=======
+    public boolean validarUsuario(Usuario usuario){
+        Session session = factory.openSession();
+        session.beginTransaction();
+        Criteria criteria = session.createCriteria(persistencia.Usuario.class);
+        Criterion username= Restrictions.eq("usuario",usuario.getUsuario());
+        Criterion passsword= Restrictions.eq("contrasenia", usuario.getContrasenia());
+        LogicalExpression andExp = Restrictions.and(username,passsword);
+        criteria.add(andExp);
+        if(criteria.list().isEmpty()){
+            return false;
+        }
+        return true;
+    }
+>>>>>>> bd38157252db0390ebdbe51163a9f5f398fa33c7
 }
