@@ -41,12 +41,7 @@ public class ModelUsuario {
             return false;
         }
     }
-
-<<<<<<< HEAD
-
-
-
-=======
+    
     public boolean validarUsuario(Usuario usuario){
         Session session = factory.openSession();
         session.beginTransaction();
@@ -60,5 +55,4 @@ public class ModelUsuario {
         }
         return true;
     }
->>>>>>> bd38157252db0390ebdbe51163a9f5f398fa33c7
 }
