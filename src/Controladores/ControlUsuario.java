@@ -8,11 +8,11 @@ import persistencia.Usuario;
 
 
 public class ControlUsuario{
-    Usuario us=new Usuario();
+    Usuario usuario=new Usuario();
     ModelUsuario ms=new ModelUsuario();
 
     @FXML
-    TextField usuario;
+    TextField users;
     @FXML
     TextField contra;
 
@@ -20,11 +20,11 @@ public class ControlUsuario{
         String nombre;
         String contrasenia;
 
-        nombre=usuario.getText();
+        nombre=users.getText();
         contrasenia=contra.getText();
-        us.setUsuario(nombre);
-        us.setContrasenia(contrasenia);
+        usuario.setUsuario(nombre);
+        usuario.setContrasenia(contrasenia);
 
-        ms.agregarUsuario(us);
+        ms.agregarUsuario(usuario);
     }
 }

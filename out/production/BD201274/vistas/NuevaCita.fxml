@@ -8,11 +8,7 @@
 <?import javafx.scene.text.Font?>
 
 
-<<<<<<< HEAD
-<AnchorPane id="AnchorPane" prefHeight="700.0" prefWidth="1400.0" style="-fx-background-color: #00CDFB;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/11.0.1" fx:controller="vistas.NuevaCitaController">
-=======
 <AnchorPane id="AnchorPane" prefHeight="700.0" prefWidth="1400.0" style="-fx-background-color: #00CDFB;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/11.0.1" fx:controller="Controladores.NuevaCitaController">
->>>>>>> 563ca0ecac3f1bfcb206c4142f3c8a348db3159e
    <children>
       <Label layoutX="522.0" layoutY="200.0" text="NUEVA CITA" textFill="WHITE">
          <font>

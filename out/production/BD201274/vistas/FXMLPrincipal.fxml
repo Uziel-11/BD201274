@@ -10,11 +10,7 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<<<<<<< HEAD
-<AnchorPane id="AnchorPane" minHeight="700.0" prefWidth="1400.0" style="-fx-background-color: WHITE;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="vistas.FXMLPrincipalController">
-=======
 <AnchorPane id="AnchorPane" minHeight="700.0" prefWidth="1400.0" style="-fx-background-color: WHITE;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controladores.FXMLPrincipalController">
->>>>>>> 563ca0ecac3f1bfcb206c4142f3c8a348db3159e
    <children>
       <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="1400.0" style="-fx-background-color: #4594F9;">
          <children>

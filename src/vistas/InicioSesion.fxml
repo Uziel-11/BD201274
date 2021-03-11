@@ -7,8 +7,8 @@
 
 <AnchorPane prefHeight="400.0" prefWidth="280.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controladores.ControlUsuario">
    <children>
-      <TextField fx:id="usuario" layoutX="36.0" layoutY="86.0" prefHeight="27.0" prefWidth="206.0" />
-      <Label layoutX="88.0" layoutY="120.0" text="Nombre de Uusario" />
+      <TextField fx:id="users" layoutX="36.0" layoutY="86.0" prefHeight="27.0" prefWidth="206.0" />
+      <Label layoutX="88.0" layoutY="120.0" text="Nombre de Usario" />
       <TextField fx:id="contra" layoutX="39.0" layoutY="155.0" prefHeight="27.0" prefWidth="206.0" />
       <Label layoutX="110.0" layoutY="211.0" text="Contraseña" />
       <Button layoutX="100.0" layoutY="274.0" mnemonicParsing="false" onAction="#enviarDatos" text="Iniciar Sesion" />
