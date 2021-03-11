@@ -10,7 +10,8 @@
       <TextField fx:id="users" layoutX="36.0" layoutY="86.0" prefHeight="27.0" prefWidth="206.0" />
       <Label layoutX="88.0" layoutY="120.0" text="Nombre de Usario" />
       <TextField fx:id="contra" layoutX="39.0" layoutY="155.0" prefHeight="27.0" prefWidth="206.0" />
-      <Label layoutX="110.0" layoutY="211.0" text="Contraseña" />
-      <Button layoutX="100.0" layoutY="274.0" mnemonicParsing="false" onAction="#enviarDatos" text="Iniciar Sesion" />
+      <Label layoutX="107.0" layoutY="191.0" text="Contraseña" />
+      <Button layoutX="100.0" layoutY="274.0" mnemonicParsing="false" onAction="#IniciarSesion" text="Iniciar Sesion" />
+      <Label fx:id="error" layoutX="36.0" layoutY="223.0" prefHeight="18.0" prefWidth="213.0" />
    </children>
 </AnchorPane>
