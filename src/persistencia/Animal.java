@@ -1,6 +1,5 @@
 package persistencia;
 
-import javax.persistence.*;
 
 
 public class Animal {
@@ -15,6 +14,10 @@ public class Animal {
     private int peso;
     private String motivo;
 
+    public Animal() {
+
+    }
+
     public Animal(int idAnimal, int idCliente, String nombre, String tipo, String raza, String sexo, String ingreso, int peso, String motivo) {
         this.idAnimal = idAnimal;
         this.idCliente = idCliente;
@@ -26,6 +29,7 @@ public class Animal {
         this.peso = peso;
         this.motivo = motivo;
     }
+
 
     public int getIdAnimal() {
         return idAnimal;

@@ -1,7 +1,5 @@
 package persistencia;
 
-import javax.persistence.*;
-
 
 public class Citas {
 
@@ -11,6 +9,10 @@ public class Citas {
     private String forma_Pago;
     private int cantidad_Pagada;
     private String facturacion;
+
+    public Citas(){
+
+    }
 
     public Citas(int idCitas, String fecha_Citas, int total_Factura, String forma_Pago, int cantidad_Pagada, String facturacion) {
         this.idCitas = idCitas;

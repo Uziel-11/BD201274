@@ -1,4 +1,4 @@
-package Controladores;
+package modelo;
 
 import java.io.PrintStream;
 import java.util.Iterator;
@@ -9,40 +9,42 @@ import org.hibernate.Transaction;
 import org.hibernate.cfg.Configuration;
 import org.hibernate.service.ServiceRegistry;
 import org.hibernate.service.ServiceRegistryBuilder;
+import persistencia.Animal;
 import persistencia.Clientes;
 
-public class ContClientes {
+public class ModelAnimal {
 
     private static SessionFactory factory;
     private static ServiceRegistry serviceRegistry;
 
-    public ContClientes(){
+    public ModelAnimal(){
         System.err.println("Iniciando");
+
         try {
             Configuration configuration = new Configuration();
-            System.err.println("Leyendo configuracion");
-            configuration.configure("");
+            System.err.println("leyendo configuracion");
+            configuration.configure("src/");
             serviceRegistry = new ServiceRegistryBuilder().applySettings(configuration.getProperties()).buildServiceRegistry();
             factory = configuration.buildSessionFactory(serviceRegistry);
-        } catch (Throwable ex) {
-            System.err.println("No se puede crear la Sesion" + ex);
+        } catch (Throwable ex){
+            System.err.println("No se puede crear la sesión" + ex);
             throw new ExceptionInInitializerError(ex);
         }
     }
 
-    public void addClientes (Clientes clientes){
+    public void addAnimales (Animal animal){
 
     }
 
-    public void deleteClientes (Clientes clientes){
+    public void deleteAnimales (Animal animal){
 
     }
 
-    public void upgradeClientes (Clientes clientes){
+    public void upgradeAnimales (Animal animal){
 
     }
 
-    //public List<Clientes> listaCliente (){
+    //public List<Animal> lisraAnimal (){
 
     //}
 }
