@@ -1,30 +1,50 @@
-package Controladores;
+package modelo;
 
-import org.hibernate.Criteria;
+import java.io.PrintStream;
+import java.util.Iterator;
+import java.util.List;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
 import org.hibernate.cfg.Configuration;
 import org.hibernate.service.ServiceRegistry;
 import org.hibernate.service.ServiceRegistryBuilder;
-import java.util.List;
+import persistencia.Animal;
+import persistencia.Clientes;
 
+public class ModelAnimal {
 
-public class DAOservice {
     private static SessionFactory factory;
     private static ServiceRegistry serviceRegistry;
 
-    public DAOservice() {}
-    public static void main(String [] args){
+    public ModelAnimal(){
         System.err.println("Iniciando");
+
         try {
             Configuration configuration = new Configuration();
-            System.err.println("Leyendo configuracion.");
-            configuration.configure("src/hibernate.cfg.xml");
+            System.err.println("leyendo configuracion");
+            configuration.configure("");
             serviceRegistry = new ServiceRegistryBuilder().applySettings(configuration.getProperties()).buildServiceRegistry();
             factory = configuration.buildSessionFactory(serviceRegistry);
-        } catch (Throwable ex) {
-            System.err.println("No se puede crear la Sesion" + ex);
+        } catch (Throwable ex){
+            System.err.println("No se puede crear la sesión" + ex);
             throw new ExceptionInInitializerError(ex);
         }
     }
+
+    public void addAnimales (Animal animal){
+
+    }
+
+    public void deleteAnimales (Animal animal){
+
+    }
+
+    public void upgradeAnimales (Animal animal){
+
+    }
+
+    //public List<Animal> lisraAnimal (){
+
+    //}
 }

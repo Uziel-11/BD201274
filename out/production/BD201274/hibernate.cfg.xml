@@ -13,12 +13,11 @@
                 <property name="dialect">org.hibernate.dialect.MySQLDialect</property>
                 <property name="hibernate.current_session_context_class">thread</property>
 
-<!--                <mapping resource="persistencia/Animal.hbm.xml" />-->
-<!--                <mapping resource="persistencia/Citas.hbm.xml" />-->
-<!--                <mapping resource="persistencia/Clientes.hbm.xml" />-->
-<!--                <mapping resource="persistencia/Detalles_Animales.hbm.xml" />-->
-<!--                <mapping resource="persistencia/Medicacion.hbm.xml" />-->
-<!--                <mapping resource="persistencia/Tratamiento.hbm.xml" />-->
+                <mapping resource="persistencia/Animal.hbm.xml" />
+                <mapping resource="persistencia/Citas.hbm.xml" />
+                <mapping resource="persistencia/Clientes.hbm.xml" />
+                <mapping resource="persistencia/Medicamento.hbm.xml" />
+                <mapping resource = "persistencia/Usuario.hbm.xml"/>
 
 	</session-factory>
 </hibernate-configuration>

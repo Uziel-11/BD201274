@@ -10,6 +10,10 @@ public class Medicamento {
     private String fechaCaducidad;
     private String sustanciaActiva;
 
+    public Medicamento(){
+
+    }
+
     public Medicamento(int idMedicamento, String nombre, int precio, String fechaCaducidad, String sustanciaActiva) {
         this.idMedicamento = idMedicamento;
         this.nombre = nombre;

@@ -1,4 +1,8 @@
 package persistencia;
+import javafx.fxml.FXML;
+import modelo.ModelUsuario;
+
+import java.util.Scanner;
 
 public class Usuario {
 
@@ -6,11 +10,17 @@ public class Usuario {
     private String usuario;
     private String contrasenia;
 
+    public Usuario(){
+
+    }
+
+
     public Usuario(int idUsuario, String usuario, String contrasenia) {
         this.idUsuario = idUsuario;
         this.usuario = usuario;
         this.contrasenia = contrasenia;
     }
+
 
     public int getIdUsuario() {
         return idUsuario;
