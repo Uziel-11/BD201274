@@ -13,8 +13,6 @@
         <property name="Nombre"  column="Nombre" />
         <property name="Celular"  column="Celular"/>
         <property name="Direccion"  column="Direccion"/>
-        <property name="Ciudad"  column="Ciudad" />
-        <property name="usuario"  column="usuario" />
-        <property name="contrasenia"  column="contrasenia" />
+        <property name="Correo"  column="Correo" />
     </class>
 </hibernate-mapping>

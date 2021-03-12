@@ -13,10 +13,6 @@
         <property name="idCliente" column="idClientes"/>
         <property name="nombre"  column="Nombre" />
         <property name="tipo"  column="Tipo"/>
-        <property name="raza"  column="Raza"/>
-        <property name="sexo"  column="Sexo" />
-        <property name="ingreso"  column="Fecha_Ingreso" />
-        <property name="peso"  column="Peso" />
-        <property name="motivo"  column="Motivo" />
+        <property name="edad"  column="Edad"/>
     </class>
 </hibernate-mapping>
