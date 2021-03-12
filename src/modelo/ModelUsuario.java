@@ -29,18 +29,18 @@ public class ModelUsuario {
         }
     }
 
-    public boolean agregarUsuario(Usuario usuario){
-        Session session = factory.openSession();
-        session.beginTransaction();
-        try {
-            session.save(usuario);
-            session.getTransaction().commit();
-            return true;
-        } catch (Exception e){
-            System.err.println(e);
-            return false;
-        }
-    }
+//    public boolean agregarUsuario(Usuario usuario){
+//        Session session = factory.openSession();
+//        session.beginTransaction();
+//        try {
+//            session.save(usuario);
+//            session.getTransaction().commit();
+//            return true;
+//        } catch (Exception e){
+//            System.err.println(e);
+//            return false;
+//        }
+//    }
 
     public boolean validarUsuario(Usuario usuario){
         Session session = factory.openSession();
