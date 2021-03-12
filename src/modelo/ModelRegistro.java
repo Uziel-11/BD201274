@@ -27,17 +27,19 @@ public class ModelRegistro {
         }
     }
 
-    public boolean agregarCliente(Clientes cliente){
+    public int agregarCliente(Clientes cliente){
         Session session = factory.openSession();
         session.beginTransaction();
+        int id = 0;
         try {
             session.save(cliente);
             session.getTransaction().commit();
-            return true;
+            id = (int) session.save(cliente);
         } catch (Exception e){
             System.err.println(e);
-            return false;
+         //   return false;
         }
+        return id;
     }
 
     public boolean agregarAnimal(Animal animal){

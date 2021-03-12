@@ -14,8 +14,8 @@ public class Animal {
 
     }
 
-    public Animal(String nombre, String tipo, String edad) {
-        this.idAnimal = idAnimal;
+    public Animal(int idCliente, String nombre, String tipo, String edad) {
+        this.idCliente = idCliente;
         this.nombre = nombre;
         this.tipo = tipo;
         this.edad=edad;

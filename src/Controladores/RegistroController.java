@@ -5,7 +5,6 @@
  */
 package Controladores;
 
-import java.awt.*;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -40,13 +39,16 @@ public class RegistroController implements Initializable {
     TextField nomMascota;
     @FXML
     TextField edadMascota;
+    @FXML
+     TextField tipo;
     int id;
+
 
     @FXML
     public void registro(){
 
-        registro.agregarCliente(new Clientes(id,nombre.getText()+" "+apellido.getText(),celular.getText(),direccion.getText(), correo.getText()));
-        registro.agregarAnimal(new Animal(nomMascota.getText(), "Chihuahua", edadMascota.getText()));
+        id = registro.agregarCliente(new Clientes(nombre.getText()+" "+apellido.getText(),celular.getText(),direccion.getText(), correo.getText()));
+        registro.agregarAnimal(new Animal(id,nomMascota.getText(), tipo.getText(), edadMascota.getText()));
 
     }
     

@@ -27,12 +27,8 @@ public class RegistradosController implements Initializable {
     @FXML
     private void home (ActionEvent eventbtn) throws IOException{
         Stage st = new Stage();
-<<<<<<< HEAD
-        Parent root = FXMLLoader.load(getClass().getResource("FXMLPrincipal.fxml"));
-=======
         Parent root = FXMLLoader.load(getClass().getResource("../vistas/FXMLPrincipal.fxml"));
-        
->>>>>>> d82ab3149874394ce9334e0777f20f1c09177b07
+
         Scene scene = new Scene(root);
         st = (Stage) ((Node)eventbtn.getSource()).getScene().getWindow();
         st.setScene(scene);

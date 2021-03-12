@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -26,12 +25,12 @@
       </Label>
       <TextField fx:id="nomMascota" layoutX="950.0" layoutY="383.0" prefHeight="25.0" prefWidth="350.0" promptText="Nombre" />
       <TextField fx:id="edadMascota" layoutX="950.0" layoutY="512.0" prefHeight="25.0" prefWidth="350.0" promptText="Edad" />
-      <ComboBox layoutX="950.0" layoutY="447.0" prefHeight="25.0" prefWidth="350.0" promptText="Especie de la mascota" />
       <TextField fx:id="nombre" layoutX="100.0" layoutY="383.0" prefHeight="25.0" prefWidth="350.0" promptText="Nombre" />
       <TextField fx:id="apellido" layoutX="485.0" layoutY="383.0" prefHeight="25.0" prefWidth="350.0" promptText="Apellido" />
       <TextField fx:id="direccion" layoutX="100.0" layoutY="447.0" prefHeight="25.0" prefWidth="350.0" promptText="Dirección" />
       <TextField fx:id="correo" layoutX="485.0" layoutY="447.0" prefHeight="25.0" prefWidth="350.0" promptText="Correo electronico" />
       <TextField fx:id="celular" layoutX="100.0" layoutY="512.0" prefHeight="25.0" prefWidth="350.0" promptText="Numero celular" />
+      <TextField fx:id="tipo" layoutX="950.0" layoutY="447.0" prefHeight="25.0" prefWidth="350.0" promptText="Tipo" />
       <Button layoutX="631.0" layoutY="600.0" mnemonicParsing="false" onAction="#registro" prefHeight="40.0" prefWidth="140.0" style="-fx-background-color: #3FFE2A;" text="Generar registro" textFill="WHITE">
          <font>
             <Font name="System Bold" size="15.0" />
