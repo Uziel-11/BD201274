@@ -37,5 +37,7 @@ public class RevisionMedicaController implements Initializable {
         st.setTitle("Home");
         st.show();
     }
+
+
     
 }

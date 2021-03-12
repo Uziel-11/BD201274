@@ -28,11 +28,8 @@ public class RegistradosController implements Initializable {
     private void home (ActionEvent eventbtn) throws IOException{
         Stage st = new Stage();
         Parent root = FXMLLoader.load(getClass().getResource("FXMLPrincipal.fxml"));
-        
         Scene scene = new Scene(root);
-        
         st = (Stage) ((Node)eventbtn.getSource()).getScene().getWindow();
-        
         st.setScene(scene);
         st.setTitle("Home");
         st.show();
