@@ -5,29 +5,55 @@
  */
 package Controladores;
 
+import java.awt.*;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.control.TextField;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import modelo.ModelRegistro;
+import persistencia.Animal;
+import persistencia.Clientes;
 
 public class RegistroController implements Initializable {
 
-    @Override
-    public void initialize(URL url, ResourceBundle rb) {
-        // TODO
-    }    
+    ModelRegistro registro=new ModelRegistro();
+
+    @FXML
+   TextField nombre;
+    @FXML
+   TextField apellido;
+    @FXML
+   TextField direccion;
+    @FXML
+   TextField celular;
+    @FXML
+    TextField correo;
+    @FXML
+    TextField nomMascota;
+    @FXML
+    TextField edadMascota;
+    int id;
+
+    @FXML
+    public void registro(){
+
+        registro.agregarCliente(new Clientes(id,nombre.getText()+" "+apellido.getText(),celular.getText(),direccion.getText(), correo.getText()));
+        registro.agregarAnimal(new Animal(nomMascota.getText(), "Chihuahua", edadMascota.getText()));
+
+    }
     
     @FXML
     private void home (ActionEvent eventbtn) throws IOException{
         Stage st = new Stage();
-        Parent root = FXMLLoader.load(getClass().getResource("FXMLPrincipal.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("../vistas/FXMLPrincipal.fxml"));
         
         Scene scene = new Scene(root);
         
@@ -37,5 +63,10 @@ public class RegistroController implements Initializable {
         st.setTitle("Home");
         st.show();
     }
-    
+
+    @Override
+    public void initialize(URL url, ResourceBundle rb) {
+        // TODO
+    }
+
 }

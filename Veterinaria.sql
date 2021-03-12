@@ -1,24 +1,9 @@
-CREATE SCHEMA `veterinaria` ;
-
-CREATE TABLE `clientes` (
-  `idClientes` int NOT NULL AUTO_INCREMENT,
-  `Nombre` varchar(50) DEFAULT NULL,
-  `Celular` mediumint DEFAULT NULL,
-  `Direccion` varchar(50) DEFAULT NULL,
-  `Ciudad` varchar(50) DEFAULT NULL,
-  PRIMARY KEY (`idClientes`)
-);
-  
-  CREATE TABLE `animales` (
-  `IdAnimales` int NOT NULL,
+CREATE TABLE `animales` (
+  `IdAnimales` int NOT NULL AUTO_INCREMENT,
   `idClientes` int NOT NULL,
   `Nombre` varchar(50) NOT NULL,
   `Tipo` varchar(50) NOT NULL,
-  `Raza` varchar(50) NOT NULL,
-  `Sexo` varchar(50) NOT NULL,
-  `Fecha_Ingreso` date NOT NULL,
-  `Peso` float NOT NULL,
-  `Motivo` varchar(50) NOT NULL,
+  `Edad` int NOT NULL,
   PRIMARY KEY (`IdAnimales`)
 );
 
@@ -33,6 +18,15 @@ CREATE TABLE `citas` (
   PRIMARY KEY (`IdCitas`)
 );
 
+CREATE TABLE `clientes` (
+  `idClientes` int NOT NULL AUTO_INCREMENT,
+  `Nombre` varchar(50) DEFAULT NULL,
+  `Celular` varchar(20) DEFAULT NULL,
+  `Direccion` varchar(50) DEFAULT NULL,
+  `Correo` varchar(50) DEFAULT NULL,
+  PRIMARY KEY (`idClientes`)
+);
+
 CREATE TABLE `medicamentos` (
   `IdMedicamento` int NOT NULL,
   `Nombre` varchar(50) NOT NULL,
@@ -43,7 +37,9 @@ CREATE TABLE `medicamentos` (
 );
 
 CREATE TABLE `usuario` (
-  `idUsuario` INT NOT NULL AUTO_INCREMENT,
-  `Usuario` VARCHAR(45) NULL,
-  `Contrasenia` VARCHAR(45) NULL,
-  PRIMARY KEY (`idUsuario`));
+  `idUsuario` int NOT NULL AUTO_INCREMENT,
+  `Usuario` varchar(45) DEFAULT NULL,
+  `Contrasenia` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`idUsuario`)
+);
+

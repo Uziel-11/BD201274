@@ -3,6 +3,7 @@ package Controladores;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.stage.Modality;
@@ -20,11 +21,13 @@ public class ControlUsuario {
     ModelUsuario ms=new ModelUsuario();
 
     @FXML
-    TextField users;
+    TextField usuar;
     @FXML
-    TextField contra;
+    TextField contrasen;
     @FXML
     Label error;
+    @FXML
+    private Button iniciar;
 
 //    public void enviarDatos(){
 //        String nombre;
@@ -40,13 +43,8 @@ public class ControlUsuario {
 
     @FXML
     public void IniciarSesion(){
-        String nombre;
-        String contrasenia;
-
-        nombre=users.getText();
-        contrasenia=contra.getText();
-        usuario.setUsuario(nombre);
-        usuario.setContrasenia(contrasenia);
+        usuario.setUsuario(usuar.getText());
+        usuario.setContrasenia(contrasen.getText());
         if (ms.validarUsuario(usuario)){
             System.out.println("Usuario y Contraseña correcta");
             try {
@@ -59,6 +57,9 @@ public class ControlUsuario {
                 stage.initModality(Modality.APPLICATION_MODAL);
                 stage.setScene(scene);
                 stage.show();
+                stage.setOnCloseRequest(e -> controlador.closeWindows());
+                Stage myStage = (Stage) this.iniciar.getScene().getWindow();
+                myStage.close();
             } catch (IOException e) {
                 Logger.getLogger(FXMLPrincipalController.class.getName()).log(Level.SEVERE, null, e);
             }
@@ -67,5 +68,6 @@ public class ControlUsuario {
             error.setText("Usuario o Contraseña Incorrectas");
         }
     }
+
 
 }

@@ -7,8 +7,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane id="AnchorPane" prefHeight="700.0" prefWidth="1400.0" style="-fx-background-color: #00CDFB;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/11.0.1" fx:controller="Controladores.RegistroController">
+<AnchorPane id="AnchorPane" prefHeight="700.0" prefWidth="1400.0" style="-fx-background-color: #00CDFB;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controladores.RegistroController">
    <children>
       <Label layoutX="557.0" layoutY="210.0" text="REGISTRO" textFill="WHITE">
          <font>
@@ -25,15 +24,15 @@
             <Font name="System Bold" size="30.0" />
          </font>
       </Label>
-      <TextField layoutX="950.0" layoutY="383.0" prefHeight="25.0" prefWidth="350.0" promptText="Nombre" />
-      <TextField layoutX="950.0" layoutY="512.0" prefHeight="25.0" prefWidth="350.0" promptText="Edad" />
+      <TextField fx:id="nomMascota" layoutX="950.0" layoutY="383.0" prefHeight="25.0" prefWidth="350.0" promptText="Nombre" />
+      <TextField fx:id="edadMascota" layoutX="950.0" layoutY="512.0" prefHeight="25.0" prefWidth="350.0" promptText="Edad" />
       <ComboBox layoutX="950.0" layoutY="447.0" prefHeight="25.0" prefWidth="350.0" promptText="Especie de la mascota" />
-      <TextField layoutX="100.0" layoutY="383.0" prefHeight="25.0" prefWidth="350.0" promptText="Nombre" />
-      <TextField layoutX="485.0" layoutY="383.0" prefHeight="25.0" prefWidth="350.0" promptText="Apellido" />
-      <TextField layoutX="100.0" layoutY="447.0" prefHeight="25.0" prefWidth="350.0" promptText="Dirección" />
-      <TextField layoutX="485.0" layoutY="447.0" prefHeight="25.0" prefWidth="350.0" promptText="Correo electronico" />
-      <TextField layoutX="100.0" layoutY="512.0" prefHeight="25.0" prefWidth="350.0" promptText="Numero celular" />
-      <Button layoutX="631.0" layoutY="600.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="140.0" style="-fx-background-color: #3FFE2A;" text="Generar registro" textFill="WHITE">
+      <TextField fx:id="nombre" layoutX="100.0" layoutY="383.0" prefHeight="25.0" prefWidth="350.0" promptText="Nombre" />
+      <TextField fx:id="apellido" layoutX="485.0" layoutY="383.0" prefHeight="25.0" prefWidth="350.0" promptText="Apellido" />
+      <TextField fx:id="direccion" layoutX="100.0" layoutY="447.0" prefHeight="25.0" prefWidth="350.0" promptText="Dirección" />
+      <TextField fx:id="correo" layoutX="485.0" layoutY="447.0" prefHeight="25.0" prefWidth="350.0" promptText="Correo electronico" />
+      <TextField fx:id="celular" layoutX="100.0" layoutY="512.0" prefHeight="25.0" prefWidth="350.0" promptText="Numero celular" />
+      <Button layoutX="631.0" layoutY="600.0" mnemonicParsing="false" onAction="#registro" prefHeight="40.0" prefWidth="140.0" style="-fx-background-color: #3FFE2A;" text="Generar registro" textFill="WHITE">
          <font>
             <Font name="System Bold" size="15.0" />
          </font>
