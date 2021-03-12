@@ -8,26 +8,17 @@ public class Animal {
     private int idCliente;
     private String nombre;
     private String tipo;
-    private String raza;
-    private String sexo;
-    private String ingreso;
-    private int peso;
-    private String motivo;
+    private String edad;
 
     public Animal() {
 
     }
 
-    public Animal(int idAnimal, int idCliente, String nombre, String tipo, String raza, String sexo, String ingreso, int peso, String motivo) {
+    public Animal(String nombre, String tipo, String edad) {
         this.idAnimal = idAnimal;
-        this.idCliente = idCliente;
         this.nombre = nombre;
         this.tipo = tipo;
-        this.raza = raza;
-        this.sexo = sexo;
-        this.ingreso = ingreso;
-        this.peso = peso;
-        this.motivo = motivo;
+        this.edad=edad;
     }
 
 
@@ -63,44 +54,11 @@ public class Animal {
         this.tipo = tipo;
     }
 
-    public String getRaza() {
-        return raza;
+    public String getEdad() {
+        return edad;
     }
 
-    public void setRaza(String raza) {
-        this.raza = raza;
+    public void setEdad(String edad) {
+        this.edad = edad;
     }
-
-    public String getSexo() {
-        return sexo;
-    }
-
-    public void setSexo(String sexo) {
-        this.sexo = sexo;
-    }
-
-    public String getIngreso() {
-        return ingreso;
-    }
-
-    public void setIngreso(String ingreso) {
-        this.ingreso = ingreso;
-    }
-
-    public int getPeso() {
-        return peso;
-    }
-
-    public void setPeso(int peso) {
-        this.peso = peso;
-    }
-
-    public String getMotivo() {
-        return motivo;
-    }
-
-    public void setMotivo(String motivo) {
-        this.motivo = motivo;
-    }
-
 }

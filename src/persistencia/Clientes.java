@@ -1,5 +1,4 @@
 package persistencia;
-import javax.persistence.*;
 
 
 public class Clientes {
@@ -8,24 +7,23 @@ public class Clientes {
     private String Nombre;
     private String Celular;
     private String Direccion;
-    private String Ciudad;
-    private String usuario;
-    private String contrasenia;
+    private String Correo;
 
     public Clientes(){
 
     }
 
-    public Clientes(int idClientes,String nombre, String celular, String direccion, String ciudad, String usuario, String contrasenia) {
-        this.idClientes = idClientes;
+    public Clientes(int idClientes,String nombre, String celular, String direccion, String correo) {
         this.Nombre = nombre;
         this.Celular = celular;
         this.Direccion = direccion;
-        this.Ciudad = ciudad;
-        this.usuario = usuario;
-        this.contrasenia = contrasenia;
+        this.Correo = correo;
     }
 
+
+    public String getNombre() {
+        return Nombre;
+    }
 
     public int getIdClientes() {
         return idClientes;
@@ -35,8 +33,12 @@ public class Clientes {
         this.idClientes = idClientes;
     }
 
-    public String getNombre() {
-        return Nombre;
+    public String getCorreo() {
+        return Correo;
+    }
+
+    public void setCorreo(String correo) {
+        Correo = correo;
     }
 
     public void setNombre(String nombre) {
@@ -60,27 +62,11 @@ public class Clientes {
     }
 
     public String getCiudad() {
-        return Ciudad;
+        return Correo;
     }
 
-    public void setCiudad(String ciudad) {
-        Ciudad = ciudad;
-    }
-
-    public String getUsuario() {
-        return usuario;
-    }
-
-    public void setUsuario(String usuario) {
-        this.usuario = usuario;
-    }
-
-    public String getContrasenia() {
-        return contrasenia;
-    }
-
-    public void setContrasenia(String contrasenia) {
-        this.contrasenia = contrasenia;
+    public void setCiudad(String correo) {
+        Correo = correo;
     }
 
 

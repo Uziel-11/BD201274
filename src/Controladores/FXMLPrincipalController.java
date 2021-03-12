@@ -20,35 +20,34 @@ import javafx.scene.control.Label;
 import javafx.stage.Stage;
 
 public class FXMLPrincipalController implements Initializable {
-    
+
     @FXML
     private Label label;
     
     @FXML
     private void cambiarVista(ActionEvent eventbtn) throws IOException {
-        
         Button btn = (Button)eventbtn.getSource();
         String vista = "";
         
         switch(btn.getText()){
             case "Revisión":
-                vista = "RevisionMedica.fxml";
+                vista = "../vistas/RevisionMedica.fxml";
                 break;
             case "Registro":
-                vista = "Registro.fxml";
+                vista = "../vistas/Registro.fxml";
                 break;
             case "Registrados":
-                vista = "Registrados.fxml";
+                vista = "../vistas/Registrados.fxml";
                 break;
         }
-        
+
         Stage st;
         Parent root = FXMLLoader.load(getClass().getResource(vista));
-        
+
         Scene scene = new Scene(root);
-        
+
         st = (Stage) ((Node)eventbtn.getSource()).getScene().getWindow();
-        
+
         st.setScene(scene);
         st.setTitle("Home");
         st.show();
@@ -57,6 +56,9 @@ public class FXMLPrincipalController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         
-    }    
-    
+    }
+
+    public void closeWindows(){
+
+    }
 }

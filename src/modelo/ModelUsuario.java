@@ -29,6 +29,7 @@ public class ModelUsuario {
         }
     }
 
+<<<<<<< HEAD
 
     public boolean agregarUsuario(Usuario usuario){
         Session session = factory.openSession();
@@ -44,6 +45,8 @@ public class ModelUsuario {
     }
     
 
+=======
+>>>>>>> d82ab3149874394ce9334e0777f20f1c09177b07
 //    public boolean agregarUsuario(Usuario usuario){
 //        Session session = factory.openSession();
 //        session.beginTransaction();
@@ -57,7 +60,10 @@ public class ModelUsuario {
 //        }
 //    }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> d82ab3149874394ce9334e0777f20f1c09177b07
     public boolean validarUsuario(Usuario usuario){
         Session session = factory.openSession();
         session.beginTransaction();

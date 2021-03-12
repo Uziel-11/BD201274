@@ -27,7 +27,7 @@ public class RevisionMedicaController implements Initializable {
     @FXML
     private void home (ActionEvent eventbtn) throws IOException{
         Stage st = new Stage();
-        Parent root = FXMLLoader.load(getClass().getResource("FXMLPrincipal.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("../vistas/FXMLPrincipal.fxml"));
         
         Scene scene = new Scene(root);
         
