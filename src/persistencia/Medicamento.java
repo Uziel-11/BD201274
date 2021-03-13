@@ -1,12 +1,17 @@
 package persistencia;
 
+import javafx.fxml.FXML;
+import javafx.scene.control.DatePicker;
+
 import javax.persistence.*;
+import java.util.Date;
 
 public class Medicamento {
 
     private int idMedicamento;
     private String nombre;
     private int precio;
+    private int cantidad;
     private String fechaCaducidad;
     private String sustanciaActiva;
 
@@ -14,10 +19,11 @@ public class Medicamento {
 
     }
 
-    public Medicamento(int idMedicamento, String nombre, int precio, String fechaCaducidad, String sustanciaActiva) {
+    public Medicamento(int idMedicamento, String nombre, int precio,int cantidad, String fechaCaducidad, String sustanciaActiva) {
         this.idMedicamento = idMedicamento;
         this.nombre = nombre;
         this.precio = precio;
+        this.cantidad = cantidad;
         this.fechaCaducidad = fechaCaducidad;
         this.sustanciaActiva = sustanciaActiva;
     }
@@ -62,4 +68,11 @@ public class Medicamento {
         this.sustanciaActiva = sustanciaActiva;
     }
 
+    public int getCantidad() {
+        return cantidad;
+    }
+
+    public void setCantidad(int cantidad) {
+        this.cantidad = cantidad;
+    }
 }

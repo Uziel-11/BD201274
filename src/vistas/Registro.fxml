@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -18,24 +19,27 @@
             <Font name="System Bold" size="30.0" />
          </font>
       </Label>
-      <Label layoutX="1063.0" layoutY="320.0" prefHeight="45.0" prefWidth="125.0" text="Mascota" textFill="WHITE">
+      <Label layoutX="1062.0" layoutY="210.0" prefHeight="45.0" prefWidth="125.0" text="Mascota" textFill="WHITE">
          <font>
             <Font name="System Bold" size="30.0" />
          </font>
       </Label>
-      <TextField fx:id="nomMascota" layoutX="950.0" layoutY="383.0" prefHeight="25.0" prefWidth="350.0" promptText="Nombre" />
-      <TextField fx:id="edadMascota" layoutX="950.0" layoutY="512.0" prefHeight="25.0" prefWidth="350.0" promptText="Edad" />
+      <TextField fx:id="nomMascota" layoutX="950.0" layoutY="298.0" prefHeight="25.0" prefWidth="350.0" promptText="Nombre" />
+      <TextField fx:id="peso" layoutX="950.0" layoutY="512.0" prefHeight="25.0" prefWidth="350.0" promptText="Peso" />
       <TextField fx:id="nombre" layoutX="100.0" layoutY="383.0" prefHeight="25.0" prefWidth="350.0" promptText="Nombre" />
       <TextField fx:id="apellido" layoutX="485.0" layoutY="383.0" prefHeight="25.0" prefWidth="350.0" promptText="Apellido" />
       <TextField fx:id="direccion" layoutX="100.0" layoutY="447.0" prefHeight="25.0" prefWidth="350.0" promptText="Dirección" />
       <TextField fx:id="correo" layoutX="485.0" layoutY="447.0" prefHeight="25.0" prefWidth="350.0" promptText="Correo electronico" />
       <TextField fx:id="celular" layoutX="100.0" layoutY="512.0" prefHeight="25.0" prefWidth="350.0" promptText="Numero celular" />
-      <TextField fx:id="tipo" layoutX="950.0" layoutY="447.0" prefHeight="25.0" prefWidth="350.0" promptText="Tipo" />
+      <TextField fx:id="especie" layoutX="949.0" layoutY="409.0" prefHeight="25.0" prefWidth="350.0" promptText="Especie" />
       <Button layoutX="631.0" layoutY="600.0" mnemonicParsing="false" onAction="#registro" prefHeight="40.0" prefWidth="140.0" style="-fx-background-color: #3FFE2A;" text="Generar registro" textFill="WHITE">
          <font>
             <Font name="System Bold" size="15.0" />
          </font>
       </Button>
       <Button layoutX="100.0" layoutY="47.0" mnemonicParsing="false" onAction="#home" text="Atras" />
+      <TextField fx:id="color" layoutX="949.0" layoutY="353.0" prefHeight="25.0" prefWidth="350.0" promptText="Color" />
+      <TextField fx:id="raza" layoutX="949.0" layoutY="460.0" prefHeight="25.0" prefWidth="350.0" promptText="Raza" />
+      <ComboBox layoutX="200.0" layoutY="173.0" prefWidth="150.0" promptText="Cliente Registrados" />
    </children>
 </AnchorPane>

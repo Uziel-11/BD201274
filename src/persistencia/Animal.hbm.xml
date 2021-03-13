@@ -12,7 +12,9 @@
 
         <property name="idCliente" column="idClientes"/>
         <property name="nombre"  column="Nombre" />
-        <property name="tipo"  column="Tipo"/>
-        <property name="edad"  column="Edad"/>
+        <property name="color"  column="Color"/>
+        <property name="especie"  column="Especie"/>
+        <property name="raza"  column="Raza"/>
+        <property name="peso"  column="Peso"/>
     </class>
 </hibernate-mapping>

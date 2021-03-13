@@ -38,17 +38,38 @@ public class RegistroController implements Initializable {
     @FXML
     TextField nomMascota;
     @FXML
-    TextField edadMascota;
+    TextField color;
     @FXML
-     TextField tipo;
+     TextField especie;
+    @FXML
+     TextField raza;
+    @FXML
+    TextField peso;
     int id;
 
 
     @FXML
     public void registro(){
 
-        id = registro.agregarCliente(new Clientes(nombre.getText()+" "+apellido.getText(),celular.getText(),direccion.getText(), correo.getText()));
-        registro.agregarAnimal(new Animal(id,nomMascota.getText(), tipo.getText(), edadMascota.getText()));
+        id = registro.agregarCliente(new Clientes(nombre.getText()+" "+apellido.getText(),
+                celular.getText(),direccion.getText(), correo.getText()));
+
+        registro.agregarAnimal(new Animal(id,nomMascota.getText(), color.getText(), especie.getText(),
+                raza.getText(), peso.getText()));
+
+        nombre.clear();
+        apellido.clear();
+        direccion.clear();
+        celular.clear();
+        correo.clear();
+        nomMascota.clear();
+        color.clear();
+        especie.clear();
+        raza.clear();
+        peso.clear();
+    }
+
+    public void clienteRegistrados(){
 
     }
     

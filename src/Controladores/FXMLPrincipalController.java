@@ -31,13 +31,13 @@ public class FXMLPrincipalController implements Initializable {
         
         switch(btn.getText()){
             case "Revisión":
-                vista = "../vistas/RevisionMedica.fxml";
+                vista = "../vistas/Medicamento.fxml";
                 break;
             case "Registro":
                 vista = "../vistas/Registro.fxml";
                 break;
-            case "Registrados":
-                vista = "../vistas/Registrados.fxml";
+            case "Medicamentos":
+                vista = "../vistas/Medicamento.fxml";
                 break;
         }
 
