@@ -3,7 +3,7 @@
 <hibernate-mapping package="persistencia">
     <class name="Medicamento" table="medicamentos" >
         <id  name="idMedicamento"
-             column="idMedicamento"
+             column="IdMedicamento"
              type="java.lang.Integer"
              unsaved-value="null">
             <generator class="native">
@@ -12,6 +12,7 @@
 
         <property name="nombre" column="Nombre"/>
         <property name="precio"  column="Precio" />
+        <property name="cantidad"  column="Cantidad" />
         <property name="fechaCaducidad"  column="fechaCaducidad"/>
         <property name="sustanciaActiva"  column="sustanciaActiva"/>
     </class>

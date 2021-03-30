@@ -31,14 +31,14 @@
             <Font size="30.0" />
          </font>
       </Label>
-      <TableView fx:id="listar" layoutX="423.0" layoutY="182.0" prefHeight="424.0" prefWidth="690.0">
+      <TableView fx:id="vista" layoutX="423.0" layoutY="182.0" prefHeight="424.0" prefWidth="738.0">
         <columns>
-          <TableColumn prefWidth="75.0" text="Codigo" />
-          <TableColumn prefWidth="159.199951171875" text="Nombre" />
-            <TableColumn prefWidth="84.00006103515625" text="Precio" />
-            <TableColumn prefWidth="102.4000244140625" text="Cantidad" />
-            <TableColumn prefWidth="146.4000244140625" text="Fecha de Caducidad" />
-            <TableColumn prefWidth="123.19998779296873" text="Sustancia Activa" />
+          <TableColumn fx:id="columnCodigo" prefWidth="75.0" text="Codigo" />
+          <TableColumn fx:id="columnNombre" prefWidth="159.199951171875" text="Nombre" />
+            <TableColumn fx:id="columnPrecio" prefWidth="84.00006103515625" text="Precio" />
+            <TableColumn fx:id="columnCantidad" prefWidth="102.4000244140625" text="Cantidad" />
+            <TableColumn fx:id="columnCaducidad" prefWidth="146.4000244140625" text="Fecha de Caducidad" />
+            <TableColumn fx:id="columnSustancia" prefWidth="168.00003662109373" text="Sustancia Activa" />
         </columns>
       </TableView>
       <TextField fx:id="codig" layoutX="1171.0" layoutY="222.0" promptText="Codigo" />
@@ -47,7 +47,7 @@
             <Font size="20.0" />
          </font>
       </Label>
-      <Button layoutX="1220.0" layoutY="267.0" mnemonicParsing="false" onAction="#eliminar" text="Aceptar" />
+      <Button layoutX="1220.0" layoutY="267.0" mnemonicParsing="false" onAction="#eliminar" style="-fx-background-color: #3FFE2A;" text="Aceptar" />
       <Button layoutX="87.0" layoutY="546.0" mnemonicParsing="false" onAction="#Agregar" prefHeight="45.0" prefWidth="120.0" style="-fx-background-color: #3FFE2A;" text="Guardar" textFill="WHITE">
          <font>
             <Font name="System Bold" size="18.0" />

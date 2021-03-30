@@ -4,23 +4,22 @@ package persistencia;
 public class Citas {
 
     private int idCitas;
-    private String fecha_Citas;
-    private int total_Factura;
-    private String forma_Pago;
-    private int cantidad_Pagada;
-    private String facturacion;
+    private int idAnimal;
+    private String fecha;
+    private String servicio;
+    private String hora;
 
     public Citas(){
 
     }
 
-    public Citas(int idCitas, String fecha_Citas, int total_Factura, String forma_Pago, int cantidad_Pagada, String facturacion) {
+
+    public Citas(int idCitas, int idAnimal, String fecha, String servicio, String hora) {
         this.idCitas = idCitas;
-        this.fecha_Citas = fecha_Citas;
-        this.total_Factura = total_Factura;
-        this.forma_Pago = forma_Pago;
-        this.cantidad_Pagada = cantidad_Pagada;
-        this.facturacion = facturacion;
+        this.idAnimal = idAnimal;
+        this.fecha = fecha;
+        this.servicio = servicio;
+        this.hora = hora;
     }
 
     public int getIdCitas() {
@@ -31,45 +30,35 @@ public class Citas {
         this.idCitas = idCitas;
     }
 
-    public String getFecha_Citas() {
-        return fecha_Citas;
+    public int getIdAnimal() {
+        return idAnimal;
     }
 
-    public void setFecha_Citas(String fecha_Citas) {
-        this.fecha_Citas = fecha_Citas;
+    public void setIdAnimal(int idAnimal) {
+        this.idAnimal = idAnimal;
     }
 
-    public int getTotal_Factura() {
-        return total_Factura;
+    public String getFecha() {
+        return fecha;
     }
 
-    public void setTotal_Factura(int total_Factura) {
-        this.total_Factura = total_Factura;
+    public void setFecha(String fecha) {
+        this.fecha = fecha;
     }
 
-    public String getForma_Pago() {
-        return forma_Pago;
+    public String getServicio() {
+        return servicio;
     }
 
-    public void setForma_Pago(String forma_Pago) {
-        this.forma_Pago = forma_Pago;
+    public void setServicio(String servicio) {
+        this.servicio = servicio;
     }
 
-    public int getCantidad_Pagada() {
-        return cantidad_Pagada;
+    public String getHora() {
+        return hora;
     }
 
-    public void setCantidad_Pagada(int cantidad_Pagada) {
-        this.cantidad_Pagada = cantidad_Pagada;
+    public void setHora(String hora) {
+        this.hora = hora;
     }
-
-    public String getFacturacion() {
-        return facturacion;
-    }
-
-    public void setFacturacion(String facturacion) {
-        this.facturacion = facturacion;
-    }
-
-
 }

@@ -8,9 +8,13 @@ package Controladores;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
+
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextField;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
@@ -40,22 +44,25 @@ public class RegistroController implements Initializable {
     @FXML
     TextField color;
     @FXML
-     TextField especie;
+    ComboBox<String> especie;
     @FXML
      TextField raza;
     @FXML
     TextField peso;
-    int id;
+    @FXML
+    TextField fechaIngreso;
+    @FXML
+    ComboBox<String> motivo;
 
 
     @FXML
     public void registro(){
 
-        id = registro.agregarCliente(new Clientes(nombre.getText()+" "+apellido.getText(),
+        int id = registro.agregarCliente(new Clientes(nombre.getText()+" "+apellido.getText(),
                 celular.getText(),direccion.getText(), correo.getText()));
 
-        registro.agregarAnimal(new Animal(id,nomMascota.getText(), color.getText(), especie.getText(),
-                raza.getText(), peso.getText()));
+        registro.agregarAnimal(new Animal(id,nomMascota.getText(), color.getText(), especie.getValue(),
+                raza.getText(), peso.getText(), fechaIngreso.getText(), motivo.getValue()));
 
         nombre.clear();
         apellido.clear();
@@ -64,12 +71,23 @@ public class RegistroController implements Initializable {
         correo.clear();
         nomMascota.clear();
         color.clear();
-        especie.clear();
         raza.clear();
         peso.clear();
+        fechaIngreso.clear();
     }
 
     public void clienteRegistrados(){
+
+    }
+
+    public void comboBox(){
+        ObservableList<String> datos = FXCollections.observableArrayList();
+        datos.addAll("Perro", "Gato", "Hamsters");
+        especie.setItems(datos);
+
+        ObservableList<String> datos2 = FXCollections.observableArrayList();
+        datos2.addAll("Enfermedad", "Aseo", "Vacunacion");
+        motivo.setItems(datos2);
 
     }
     
@@ -89,7 +107,7 @@ public class RegistroController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // TODO
+        comboBox();
     }
 
 }

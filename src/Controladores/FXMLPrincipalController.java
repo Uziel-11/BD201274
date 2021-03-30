@@ -30,8 +30,8 @@ public class FXMLPrincipalController implements Initializable {
         String vista = "";
         
         switch(btn.getText()){
-            case "Revisión":
-                vista = "../vistas/Medicamento.fxml";
+            case "Cita":
+                vista = "../vistas/NuevaCita.fxml";
                 break;
             case "Registro":
                 vista = "../vistas/Registro.fxml";

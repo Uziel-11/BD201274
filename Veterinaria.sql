@@ -1,3 +1,5 @@
+CREATE SCHEMA `veterinaria` ;
+
 CREATE TABLE `animales` (
   `IdAnimales` int NOT NULL AUTO_INCREMENT,
   `idClientes` int NOT NULL,
@@ -6,17 +8,17 @@ CREATE TABLE `animales` (
   `Especie` varchar(50) NOT NULL,
   `Raza` varchar(45) DEFAULT NULL,
   `Peso` int DEFAULT NULL,
+  `Ingreso` varchar(20) default null,
+  `Motivo` varchar(50) default null,
   PRIMARY KEY (`IdAnimales`)
 );
 
 CREATE TABLE `citas` (
-  `IdCitas` int NOT NULL,
-  `idAnimales` varchar(45) DEFAULT NULL,
-  `Fecha_Citas` date NOT NULL,
-  `Total_Factura` int NOT NULL,
-  `Forma_Pago` varchar(50) NOT NULL,
-  `Cantidad_Pagada` int NOT NULL,
-  `Facturacion` int NOT NULL,
+  `IdCitas` int NOT NULL auto_increment,
+  `IdAnimales` varchar(45) DEFAULT NULL,
+  `Fecha` varchar(20) default NULL,
+  `Hora` varchar (20) default null,
+  `Motivo` varchar (50) default null,
   PRIMARY KEY (`IdCitas`)
 );
 
@@ -30,7 +32,8 @@ CREATE TABLE `clientes` (
 );
 
 CREATE TABLE `medicamentos` (
-  `IdMedicamento` int NOT NULL,
+  `IdMedicamento` int auto_increment NOT NULL,
+  `Codigo` int default null,
   `Nombre` varchar(50) DEFAULT NULL,
   `Precio` int DEFAULT NULL,
   `Cantidad` int DEFAULT NULL,

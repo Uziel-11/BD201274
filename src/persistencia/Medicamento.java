@@ -1,12 +1,9 @@
 package persistencia;
 
-import javafx.fxml.FXML;
-import javafx.scene.control.DatePicker;
 
-import javax.persistence.*;
-import java.util.Date;
 
 public class Medicamento {
+
 
     private int idMedicamento;
     private String nombre;
@@ -19,6 +16,10 @@ public class Medicamento {
 
     }
 
+    public Medicamento(int idMedicamento){
+        this.idMedicamento = idMedicamento;
+    }
+
     public Medicamento(int idMedicamento, String nombre, int precio,int cantidad, String fechaCaducidad, String sustanciaActiva) {
         this.idMedicamento = idMedicamento;
         this.nombre = nombre;
@@ -27,6 +28,7 @@ public class Medicamento {
         this.fechaCaducidad = fechaCaducidad;
         this.sustanciaActiva = sustanciaActiva;
     }
+
 
     public int getIdMedicamento() {
         return idMedicamento;

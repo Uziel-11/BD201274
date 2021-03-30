@@ -11,18 +11,38 @@ public class Animal {
     private String especie;
     private String raza;
     private String peso;
+    private String fechaIngreso;
+    private String motivo;
 
     public Animal() {
 
     }
 
-    public Animal(int idCliente, String nombre, String color, String especie, String raza, String peso) {
+    public Animal(int idCliente, String nombre, String color, String especie, String raza, String peso, String fechaIngreso, String motivo) {
         this.idCliente = idCliente;
         this.nombre = nombre;
         this.color = color;
         this.especie = especie;
         this.raza = raza;
         this.peso = peso;
+        this.fechaIngreso = fechaIngreso;
+        this.motivo = motivo;
+    }
+
+    public String getFechaIngreso() {
+        return fechaIngreso;
+    }
+
+    public void setFechaIngreso(String fechaIngreso) {
+        this.fechaIngreso = fechaIngreso;
+    }
+
+    public String getMotivo() {
+        return motivo;
+    }
+
+    public void setMotivo(String motivo) {
+        this.motivo = motivo;
     }
 
     public int getIdAnimal() {
