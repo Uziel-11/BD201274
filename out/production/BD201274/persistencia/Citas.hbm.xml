@@ -10,10 +10,9 @@
             </generator>
         </id>
 
-        <property name="fecha_Citas" column="Fecha_Citas"/>
-        <property name="total_Factura"  column="Total_Factura" />
-        <property name="forma_Pago"  column="Forma_Pago"/>
-        <property name="cantidad_Pagada"  column="Cantidad_Pagada"/>
-        <property name="facturacion"  column="Facturacion" />
+        <property name="idAnimal" column="IdAnimales"/>
+        <property name="fecha" column="Fecha"/>
+        <property name="hora"  column="Hora" />
+        <property name="servicio"  column="Motivo"/>
     </class>
 </hibernate-mapping>
