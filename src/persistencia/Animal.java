@@ -5,37 +5,28 @@ package persistencia;
 public class Animal {
 
     private int idAnimal;
-    private int idCliente;
+    private String nomCliente;
     private String nombre;
     private String color;
     private String especie;
     private String raza;
     private String peso;
-    private String fechaIngreso;
     private String motivo;
 
     public Animal() {
 
     }
 
-    public Animal(int idCliente, String nombre, String color, String especie, String raza, String peso, String fechaIngreso, String motivo) {
-        this.idCliente = idCliente;
+    public Animal(String nomCliente, String nombre, String color, String especie, String raza, String peso, String motivo) {
+        this.nomCliente = nomCliente;
         this.nombre = nombre;
         this.color = color;
         this.especie = especie;
         this.raza = raza;
         this.peso = peso;
-        this.fechaIngreso = fechaIngreso;
         this.motivo = motivo;
     }
 
-    public String getFechaIngreso() {
-        return fechaIngreso;
-    }
-
-    public void setFechaIngreso(String fechaIngreso) {
-        this.fechaIngreso = fechaIngreso;
-    }
 
     public String getMotivo() {
         return motivo;
@@ -51,14 +42,6 @@ public class Animal {
 
     public void setIdAnimal(int idAnimal) {
         this.idAnimal = idAnimal;
-    }
-
-    public int getIdCliente() {
-        return idCliente;
-    }
-
-    public void setIdCliente(int idCliente) {
-        this.idCliente = idCliente;
     }
 
     public String getNombre() {
@@ -99,5 +82,13 @@ public class Animal {
 
     public void setPeso(String peso) {
         this.peso = peso;
+    }
+
+    public String getNomCliente() {
+        return nomCliente;
+    }
+
+    public void setNomCliente(String nomCliente) {
+        this.nomCliente = nomCliente;
     }
 }

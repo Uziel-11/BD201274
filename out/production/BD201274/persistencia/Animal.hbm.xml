@@ -10,13 +10,12 @@
             </generator>
         </id>
 
-        <property name="idCliente" column="idClientes"/>
+        <property name="nomCliente" column="NombreCliente"/>
         <property name="nombre"  column="Nombre" />
         <property name="color"  column="Color"/>
         <property name="especie" column="Especie"/>
         <property name="raza"  column="Raza"/>
         <property name="peso"  column="Peso"/>
-        <property name="fechaIngreso" column="Ingreso"/>
         <property name="motivo" column="Motivo"/>
     </class>
 </hibernate-mapping>

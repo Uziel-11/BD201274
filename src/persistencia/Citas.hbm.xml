@@ -13,6 +13,5 @@
         <property name="idAnimal" column="IdAnimales"/>
         <property name="fecha" column="Fecha"/>
         <property name="hora"  column="Hora" />
-        <property name="servicio"  column="Motivo"/>
     </class>
 </hibernate-mapping>

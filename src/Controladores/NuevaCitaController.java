@@ -5,30 +5,37 @@
  */
 package Controladores;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.List;
 import java.util.ResourceBundle;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.control.ComboBox;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
-import javafx.scene.control.TextField;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.text.Text;
+import javafx.stage.Stage;
 import modelo.ModelAnimal;
 import modelo.ModelCita;
+import modelo.ModelRegistrados;
 import org.hibernate.sql.Select;
 import persistencia.Animal;
 import persistencia.Citas;
 import persistencia.Clientes;
+import persistencia.Registrados;
 
 public class NuevaCitaController implements Initializable {
 
     ModelCita cita = new ModelCita();
+    ModelRegistrados registrados = new ModelRegistrados();
 
     ObservableList<Clientes> list = FXCollections.observableArrayList();
 
@@ -42,7 +49,7 @@ public class NuevaCitaController implements Initializable {
     private TableColumn<Clientes, String> telefono;
 
     @FXML
-    private TextField idCliente;
+    private TextField nomCliente;
     @FXML
     private TextField nombreAnimal;
     @FXML
@@ -66,13 +73,18 @@ public class NuevaCitaController implements Initializable {
     public void Agregar(){
 
 
-        int idAnimal = cita.addAnimal(new Animal(Integer.parseInt(idCliente.getText()), nombreAnimal.getText(), color.getText(),
+        int idAnimal = cita.addAnimal(new Animal(nomCliente.getText(), nombreAnimal.getText(), color.getText(),
                 especie.getValue(), raza.getText(),
-                peso.getText(), ingreso.getText(), razon.getValue()));
+                peso.getText(), razon.getValue()));
 
-        cita.addCita(new Citas(idCita,idAnimal, ingreso.getText(),razon.getValue(), hora.getText()));
+        cita.addCita(new Citas(idCita,idAnimal, ingreso.getText(), hora.getText()));
 
-        ingreso.clear(); hora.clear(); idCliente.clear(); nombreAnimal.clear();
+
+
+        registrados.agregar(new Registrados(nomCliente.getText(), nombreAnimal.getText(),
+                color.getText(), especie.getValue(), raza.getText(), razon.getValue()));
+
+        ingreso.clear(); hora.clear(); nomCliente.clear(); nombreAnimal.clear();
         color.clear(); raza.clear(); peso.clear();
     }
 
@@ -111,9 +123,19 @@ public class NuevaCitaController implements Initializable {
 
     }
 
+    @FXML
+    private void atras (ActionEvent eventbtn) throws IOException {
+        Stage st = new Stage();
+        Parent root = FXMLLoader.load(getClass().getResource("../vistas/FXMLPrincipal.fxml"));
 
+        Scene scene = new Scene(root);
 
+        st = (Stage) ((Node)eventbtn.getSource()).getScene().getWindow();
 
+        st.setScene(scene);
+        st.setTitle("Home");
+        st.show();
+    }
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {

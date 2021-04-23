@@ -21,7 +21,7 @@
             <Font name="System Bold" size="15.0" />
          </font>
       </Button>
-      <Button layoutX="100.0" layoutY="37.0" mnemonicParsing="false" text="Atras" />
+      <Button  layoutX="100.0" layoutY="37.0" onAction="#atras" mnemonicParsing="false" text="Atras" />
       <TableView fx:id="vista" layoutX="44.0" layoutY="153.0" prefHeight="317.0" prefWidth="356.0">
         <columns>
           <TableColumn fx:id="id" prefWidth="56.799983978271484" text="ID" />
@@ -34,7 +34,7 @@
             <Font size="20.0" />
          </font>
       </Label>
-      <TextField fx:id="idCliente" layoutX="477.0" layoutY="153.0" prefHeight="40.0" prefWidth="322.0" promptText="Id Cliente" />
+      <TextField fx:id="nomCliente" layoutX="477.0" layoutY="153.0" prefHeight="40.0" prefWidth="322.0" promptText="Nombre del Cliente" />
       <TextField fx:id="nombreAnimal" layoutX="878.0" layoutY="153.0" prefHeight="40.0" prefWidth="322.0" promptText="Nombre de la Mascota" />
       <TextField fx:id="ingreso" layoutX="878.0" layoutY="235.0" prefHeight="40.0" prefWidth="322.0" promptText="Fecha de Ingreso" />
       <ComboBox fx:id="especie" layoutX="477.0" layoutY="235.0" prefHeight="40.0" prefWidth="322.0" promptText="Especie" />

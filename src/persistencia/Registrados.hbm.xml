@@ -1,21 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping package="persistencia">
-    <class name="Animal" table="animales" >
-        <id  name="idAnimal"
-             column="IdAnimales"
+    <class name="Registrados" table="registrados" >
+        <id  name="idRegistrados"
+             column="idRegistrados"
              type="java.lang.Integer"
              unsaved-value="null">
             <generator class="native">
             </generator>
         </id>
 
-        <property name="nomCliente" column="NombreCliente"/>
-        <property name="nombre"  column="Nombre" />
+        <property name="nomCliente"  column="NombreCliente" />
+        <property name="nomAnimal"  column="NombreAnimal"/>
         <property name="color"  column="Color"/>
-        <property name="especie" column="Especie"/>
+        <property name="especie"  column="Especie"/>
         <property name="raza"  column="Raza"/>
-        <property name="peso"  column="Peso"/>
-        <property name="motivo" column="Motivo"/>
+        <property name="motivo"  column="Motivo"/>
     </class>
 </hibernate-mapping>

@@ -39,6 +39,10 @@ public class FXMLPrincipalController implements Initializable {
             case "Medicamentos":
                 vista = "../vistas/Medicamento.fxml";
                 break;
+
+            case "Registrados":
+                vista = "../vistas/Registros.fxml";
+                break;
         }
 
         Stage st;

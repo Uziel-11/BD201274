@@ -4,9 +4,10 @@ package persistencia;
 public class Citas {
 
     private int idCitas;
+    private String nomCliente;
     private int idAnimal;
+    private String nomAnimal;
     private String fecha;
-    private String servicio;
     private String hora;
 
     public Citas(){
@@ -14,11 +15,10 @@ public class Citas {
     }
 
 
-    public Citas(int idCitas, int idAnimal, String fecha, String servicio, String hora) {
+    public Citas(int idCitas, int idAnimal, String fecha, String hora) {
         this.idCitas = idCitas;
         this.idAnimal = idAnimal;
         this.fecha = fecha;
-        this.servicio = servicio;
         this.hora = hora;
     }
 
@@ -46,13 +46,6 @@ public class Citas {
         this.fecha = fecha;
     }
 
-    public String getServicio() {
-        return servicio;
-    }
-
-    public void setServicio(String servicio) {
-        this.servicio = servicio;
-    }
 
     public String getHora() {
         return hora;
@@ -60,5 +53,21 @@ public class Citas {
 
     public void setHora(String hora) {
         this.hora = hora;
+    }
+
+    public String getNomCliente() {
+        return nomCliente;
+    }
+
+    public void setNomCliente(String nomCliente) {
+        this.nomCliente = nomCliente;
+    }
+
+    public String getNomAnimal() {
+        return nomAnimal;
+    }
+
+    public void setNomAnimal(String nomAnimal) {
+        this.nomAnimal = nomAnimal;
     }
 }

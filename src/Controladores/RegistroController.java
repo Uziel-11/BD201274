@@ -21,13 +21,16 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import modelo.ModelRegistrados;
 import modelo.ModelRegistro;
 import persistencia.Animal;
 import persistencia.Clientes;
+import persistencia.Registrados;
 
 public class RegistroController implements Initializable {
 
-    ModelRegistro registro=new ModelRegistro();
+    ModelRegistro registro = new ModelRegistro();
+    ModelRegistrados registrados = new ModelRegistrados();
 
     @FXML
    TextField nombre;
@@ -58,11 +61,15 @@ public class RegistroController implements Initializable {
     @FXML
     public void registro(){
 
-        int id = registro.agregarCliente(new Clientes(nombre.getText()+" "+apellido.getText(),
+        registrados.agregar(new Registrados(nombre.getText()+" "+apellido.getText(), nomMascota.getText(),
+                color.getText(), especie.getValue(), raza.getText(), motivo.getValue()));
+
+        registro.agregarCliente(new Clientes(nombre.getText()+" "+apellido.getText(),
                 celular.getText(),direccion.getText(), correo.getText()));
 
-        registro.agregarAnimal(new Animal(id,nomMascota.getText(), color.getText(), especie.getValue(),
-                raza.getText(), peso.getText(), fechaIngreso.getText(), motivo.getValue()));
+        registro.agregarAnimal(new Animal(nombre.getText(),nomMascota.getText(), color.getText(), especie.getValue(),
+                raza.getText(), peso.getText(), motivo.getValue()));
+
 
         nombre.clear();
         apellido.clear();
